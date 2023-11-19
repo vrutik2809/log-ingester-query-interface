@@ -28,10 +28,11 @@ This is the frontend for the Log Ingester, providing a user interface to ingest,
    npm install
    ```
 
-4. Set the PORT in `.env` file
+4. Set the PORT in `.env` file and backend url
 
    ```bash
-    PORT=3456
+   PORT=3456
+   REACT_APP_BACKEND_URL = <log_ingester_backend_url> # "http://localhost:3000"
    ```
 
 4. Start the development server:
