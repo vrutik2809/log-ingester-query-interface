@@ -13,7 +13,7 @@ This is the frontend for the Log Ingester, providing a user interface to ingest,
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/vrutik2809/log-ingester-frontend.git
+   git clone https://github.com/vrutik2809/log-ingester-query-interface.git
    ```
 
 2. Navigate to the project directory:
