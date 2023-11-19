@@ -13,6 +13,10 @@ import {
 
 import JsonDisplay from './components/JsonDisplay';
 
+const axiosInstance = axios.create({
+  baseURL: process.env.REACT_APP_BACKEND_URL
+})
+
 const searchableFields = [
   'level',
   'message',
@@ -58,7 +62,7 @@ function App() {
       const queryString = queries
         .map(({ field, value }) => `${field}=${value}`)
         .join('&');
-      const response = await axios.get(`http://localhost:3000/api/logs?${queryString}`);
+      const response = await axiosInstance.get(`/api/logs?${queryString}`);
       setLogs(response.data.data);
     } catch (error) {
       console.error('Error searching logs:', error.response ? error.response.data : error.message);
